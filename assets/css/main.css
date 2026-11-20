@@ -1,0 +1,422 @@
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../img/inicio/hero.jpg');
+  background-size: cover;
+  background-position: center -7%;
+  background-attachment: fixed;
+}
+
+h2{letter-spacing: 0.03em; margin: 0 0 1.5rem; }
+h2::after{content: ''; display: block; width: 60px; height: 4px; background: #f7d156; margin-top: 1rem;}
+p {max-width: 60ch; color: #ccc; font-size: 1.1rem; line-height: 1.8; margin: 0 0 2rem;}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 6rem 1rem;
+}
+
+.sobre img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.trabalhos {
+  padding: 2rem 0 6rem;
+}
+
+.trabalhos__lista {
+  display: grid;
+  grid-template-columns: repeat(5, 170px);
+  justify-content: start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.trabalho {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.trabalho img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.trabalho:hover img {
+  transform: scale(1.01);
+}
+
+.trabalho figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(transparent, rgba(43, 43, 43, 0.7));
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trabalho figcaption::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #f7d156;
+  margin-bottom: 0.5rem;
+}
+
+.linhaTempo {
+  padding: 2rem 0 0;
+}
+
+.linhaTempo__lista {
+  margin: 2.5rem 0 3rem;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.linhaTempo__item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.linhaTempo__item:last-child {
+  margin-bottom: 0;
+}
+
+.linhaTempo__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem - 8px);
+  top: 0.45rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f7d156;
+  box-shadow: 0 0 0 4px #222222;
+  transition: transform 0.3s;
+}
+
+.linhaTempo__item:hover::before {
+  transform: scale(1.3);
+}
+
+h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #f7d156;
+}
+
+.linhaTempo__item p {
+  margin: 0;
+}
+
+.postsRecentes {
+  padding: 2rem 0 6rem;
+}
+
+.blog__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.post-card {
+  background: #2b2b2b;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card__link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-card__link:hover {
+  color: inherit;
+}
+
+.post-card__img {
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: #333;
+  overflow: hidden;
+}
+
+.post-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-card__corpo {
+  padding: 1.5rem;
+}
+
+.post-card__data {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f7d156;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-card h3 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.post-card__link:hover h3 {
+  color: #f7d156;
+}
+
+.post-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+
+
+/* sobre  */
+
+.apresentacao {
+  padding: 9rem 0 3rem;
+}
+
+.apresentacao p {
+  max-width: 60ch;
+  margin: 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid #f7d156;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.biografia {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+  padding: 3rem 0 4rem;
+}
+
+.biografia__texto p {
+  margin: 0 0 1.5rem;
+  color: #ccc;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.sobre-ficha {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  background: #2b2b2b;
+  border-radius: 8px;
+}
+
+.sobre-ficha h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.03em;
+}
+
+.sobre-ficha__foto {
+  margin: 0 0 1.5rem;
+}
+
+.sobre-ficha__foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.sobre-ficha__foto figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.sobre-ficha__dados {
+  margin: 0;
+}
+
+.sobre-ficha__dados div {
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sobre-ficha__dados dt {
+  margin-bottom: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f7d156;
+}
+
+.sobre-ficha__dados dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.sobre-ficha__dados dd p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.premios {
+  padding: 2rem 0 6rem;
+}
+
+.premios__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.premio {
+  padding: 1.5rem;
+  background: #2b2b2b;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.premio:hover {
+  transform: translateY(-4px);
+}
+
+.premio h3 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+}
+
+.premio ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.premio li {
+  padding: 0.5rem 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.premio li span {
+  margin-right: 0.5rem;
+  font-weight: 700;
+  color: #f7d156;
+}
+
+.premios__nota {
+  max-width: 60ch;
+  margin: 2rem 0 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+/* contato */ 
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0 0rem;
+}
+
+.contato_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contato_info a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.contato_info svg {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  padding: 11px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #f5f5f5;
+  transition: 0.3s;
+}
+
+.contato_info a:hover {
+  color: #f7d156;
+}
+
+.contato_info a:hover svg {
+  color: #222;
+  background: #f7d156;
+  border-color: #f7d156;
+}
+
+.contato_email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  color: #ccc;
+  overflow-wrap: anywhere;
+}
+
+.contato_img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+
+/* blog */
+
+.page-hero {
+  padding: 4rem 0 0rem;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.15); */
+}
+
+.page-hero h2 {
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

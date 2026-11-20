@@ -1,0 +1,43 @@
+/* Página Trabalhos: abas para separar os grupos */
+.trabalhos-pagina { padding-top: 2rem; }
+
+.trabalhos-abas { display: none; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 2rem; }
+.tem-abas .trabalhos-abas { display: flex; }
+
+.trabalhos-aba {
+  background: transparent;
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.trabalhos-aba:hover { color: #f7d156; border-color: #f7d156; }
+.trabalhos-aba.is-ativa { background: #f7d156; border-color: #f7d156; color: #222; }
+
+/* Com JavaScript: mostra um grupo por vez. Sem JavaScript: mostra todos, cada um com seu título. */
+.tem-abas .trabalhos-grupo { display: none; }
+.tem-abas .trabalhos-grupo.is-ativo { display: block; }
+.tem-abas .trabalhos-grupo__titulo { display: none; }
+
+/* Paginação dentro de cada grupo */
+.trabalhos-paginacao { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin: 0 0 3rem; }
+
+.trabalhos-pag {
+  min-width: 2.5rem;
+  background: transparent;
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.trabalhos-pag:hover:not(:disabled) { color: #f7d156; border-color: #f7d156; }
+.trabalhos-pag.is-atual { background: #f7d156; border-color: #f7d156; color: #222; }
+.trabalhos-pag:disabled { opacity: 0.35; cursor: default; }

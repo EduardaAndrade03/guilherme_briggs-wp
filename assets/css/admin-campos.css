@@ -1,0 +1,33 @@
+/* Estilo dos campos do tema na tela de edição das páginas */
+.tema-campo { margin: 0 0 16px; }
+.tema-rotulo { display: block; font-weight: 600; margin-bottom: 4px; }
+.tema-campo input[type=text],
+.tema-campo input[type=url],
+.tema-campo textarea { width: 100%; }
+
+/* Itens das listas (abrem e fecham) */
+.tema-linha { border: 1px solid #c3c4c7; background: #f6f7f7; border-radius: 4px; margin-bottom: 8px; }
+.tema-linha-topo { display: flex; align-items: center; gap: 8px; padding: 6px 10px; }
+.tema-linha-toggle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  color: #1d2327;
+}
+.tema-linha-seta::before { content: "▾"; display: inline-block; width: 14px; }
+.tema-linha.is-fechada .tema-linha-seta::before { content: "▸"; }
+.tema-linha-acoes .button-link { margin-left: 12px; text-decoration: none; }
+.tema-linha-remover { color: #b32d2e; }
+.tema-linha-corpo { padding: 4px 12px 0; border-top: 1px solid #dcdcde; background: #fff; }
+.tema-linha-corpo > .tema-campo:first-child { margin-top: 12px; }
+.tema-linha.is-fechada .tema-linha-corpo { display: none; }
+
+.tema-img-previa img { display: block; max-width: 200px; height: auto; margin-bottom: 8px; }
